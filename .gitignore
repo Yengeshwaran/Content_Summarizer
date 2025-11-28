@@ -1,0 +1,48 @@
+# Python cache & bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment folders
+venv/
+env/
+.venv/
+
+# Streamlit cache
+.streamlit/
+
+# AWS credentials (never push these)
+.aws/
+*.csv
+
+# Environment variable files
+.env
+.env.*
+
+# OS / Editor specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Uploaded or test files (optional)
+*.pdf
+*.txt
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Project-specific
+docs/*.drawio
+assets/raw/
