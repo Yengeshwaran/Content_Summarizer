@@ -1,66 +1,146 @@
 📄 Document Summarizer using Amazon Bedrock & Streamlit
 
-A simple and fast PDF summarization app built with Amazon Bedrock (Claude Sonnet) and a clean Streamlit UI.
-Upload a document → Enter a prompt → Get an instant AI-generated summary.
+(Built as part of the AI for Bharat – Powered by AWS Learning Program)
+
+This project is a document summarization application originally developed during the AI for Bharat – Innovation Hack2Skill Program (Media Partner: YourStory).
+The code in this repository is based on the official workshop lab materials, and I have made additional improvements to:
+
+UI layout
+
+File upload handling
+
+Folder structure
+
+Documentation
+
+Architecture diagrams
+
+
+This repository is intended for learning, reference, and demonstration only.
+
 
 ---
-⚠️ Important Note About Usage & Billing
 
-This project was created as part of an educational workshop environment, where Amazon Bedrock usage was free and pre-configured.
+⚠️ Important: About AWS Billing
 
-If you run this application on your personal AWS account, you will incur charges
-because Amazon Bedrock is NOT included in the AWS Free Tier.
+During the AI for Bharat workshop, we used a temporary, free, pre-configured AWS environment where Amazon Bedrock usage was covered by AWS.
 
-💰 Bedrock Pricing Reference
+Outside the workshop environment (i.e., on your own AWS account), Amazon Bedrock API calls are NOT free.
+Running bedrock.converse() or generating summaries will incur charges.
 
-Please review the official pricing before running this application: 🔗 https://aws.amazon.com/bedrock/pricing/
+📘 AWS Bedrock Pricing
 
-📘 Bedrock Model Billing Documentation
+🔗 https://aws.amazon.com/bedrock/pricing/
+
+📘 Model Billing Details
 
 🔗 https://docs.aws.amazon.com/bedrock/latest/userguide/pricing.html
 
-If you want to avoid unexpected charges:
+To avoid unexpected charges:
 
-Disable Bedrock model access in your AWS account
+Disable Bedrock model access
 
-Set up an AWS Billing Budget alert
+Set up AWS Budget Alerts
 
-Or run the UI without calling the Bedrock API
+Or run the UI without calling the API
+
+
 
 ---
+
 ✨ Features
 
-Upload PDF files
+Upload PDF documents
 
-Custom summary instructions
+Enter custom summarization instructions
 
-AI-powered summarization using Amazon Bedrock
+AI-generated summaries from Amazon Bedrock
 
-Clean two-column UI (input → output)
+Clean, two-column Streamlit interface
 
-Lightweight and easy to run
+Easy to run and extend
 
 
 
 ---
 
-🏗 Architecture
+🧠 How It Works
+
+1. Upload a PDF file
+
+
+2. Streamlit reads the document and prompt
+
+
+3. Backend sends bytes + instructions to Amazon Bedrock Converse API
+
+
+4. Claude (Sonnet) analyzes content
+
+
+5. Summary is generated and displayed
 
 
 
-User → Streamlit UI → Backend (boto3) → Amazon Bedrock → Summary Output
+
+---
+
+🧰 Tech Stack
+
+Amazon Bedrock (Claude 3 Sonnet)
+
+Converse API with Document-Chat
+
+Python 3 & boto3
+
+Streamlit
+
+PDF byte processing
+
+
+
+---
+
+🏗 Architecture Diagram
+
+(Add your architecture image here)
+
+
+User → Streamlit App → summarization_lib.py → Amazon Bedrock → Summary Output
 
 
 ---
 
 🖥 UI Preview
 
-[Final UI](docs/Final UI.jpg)
+(Add your UI screenshot here)
+![Final UI](docs/Final UI.jpg)
 
 
 ---
 
-🚀 Run the App
+📁 Project Structure
+
+document-summarizer/
+│
+├── app/
+│   ├── app.py                  # Streamlit UI
+│   └── summarization_lib.py    # Bedrock logic
+│
+├── docs/
+│   ├── Final UI.jpg
+│   └── Archietecture.png
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
+
+
+---
+
+▶️ How to Run Locally
+
+⚠ Reminder: Running on your AWS account triggers real Bedrock charges.
 
 pip install -r requirements.txt
 aws configure
@@ -69,38 +149,57 @@ streamlit run app/app.py
 
 ---
 
-🧰 Tech Stack
+🚀 Use Cases
 
-Amazon Bedrock – Converse API
+Report summarization
 
-Claude 3 Sonnet Model
+Research paper insights
 
-Streamlit
+Meeting transcript summaries
 
-Python 3
+Customer case analysis
 
-boto3
+Academic content simplification
 
 
 
 ---
 
-📌 Project Structure
+📝 Attribution & Event Details
 
-app/                # Streamlit frontend
-├── app.py
-└── summarization_lib.py
+This project is derived from the Content Summarizer Lab taught during the:
 
-docs/               # Screenshots & diagrams
-├── Final UI.jpg
-└── Archietecture.png
+AI for Bharat – Powered by AWS
 
-requirements.txt
-.gitignore
-README.md
+Organized by: Innovation Hack2Skill
+Media Partner: YourStory
+
+The workshop provided:
+
+Guided labs
+
+Preconfigured Bedrock access
+
+Educational sample code
 
 
-⭐ Like this project?
+I used the workshop’s base implementation and added modifications to improve:
 
-Consider giving it a star ⭐ to support.
+Folder structure
 
+UI design
+
+Documentation
+
+Readability
+
+Architecture diagrams
+
+
+This repository is not an official AWS product—it is an educational reconstruction and enhancement based on the training materials.
+
+---
+
+⭐ Support
+
+If this project helped you, consider giving it a star ⭐ on GitHub!
