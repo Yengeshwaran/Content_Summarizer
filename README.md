@@ -1,0 +1,81 @@
+📄 Document Summarizer using Amazon Bedrock & Streamlit
+
+A simple and fast PDF summarization app built with Amazon Bedrock (Claude Sonnet) and a clean Streamlit UI.
+Upload a document → Enter a prompt → Get an instant AI-generated summary.
+
+
+✨ Features
+
+Upload PDF files
+
+Custom summary instructions
+
+AI-powered summarization using Amazon Bedrock
+
+Clean two-column UI (input → output)
+
+Lightweight and easy to run
+
+
+
+---
+
+🏗 Architecture
+
+
+
+User → Streamlit UI → Backend (boto3) → Amazon Bedrock → Summary Output
+
+
+---
+
+🖥 UI Preview
+
+[Final UI](docs/Final UI.jpg)
+
+
+---
+
+🚀 Run the App
+
+pip install -r requirements.txt
+aws configure
+streamlit run app/app.py
+
+
+---
+
+🧰 Tech Stack
+
+Amazon Bedrock – Converse API
+
+Claude 3 Sonnet Model
+
+Streamlit
+
+Python 3
+
+boto3
+
+
+
+---
+
+📌 Project Structure
+
+app/                # Streamlit frontend
+├── app.py
+└── summarization_lib.py
+
+docs/               # Screenshots & diagrams
+├── Final UI.jpg
+└── Archietecture.png
+
+requirements.txt
+.gitignore
+README.md
+
+
+⭐ Like this project?
+
+Consider giving it a star ⭐ to support.
